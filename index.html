@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fahim Chowdhury- Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Mobile Menu Button -->
+    <button id="mobile-menu-btn" class="mobile-menu-btn">
+        <svg id="menu-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="2">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+        <svg id="close-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="2" style="display: none;">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+    </button>
+
+    <!-- Side Navigation -->
+    <nav id="side-nav" class="side-nav">
+        <div class="nav-logo">
+            <div class="logo-circle">fahim</div>
+        </div>
+
+        <div class="nav-items">
+            <a href="#home" class="nav-item active" data-section="home">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="3" y1="12" x2="21" y2="12"></line>
+                    <line x1="3" y1="6" x2="21" y2="6"></line>
+                    <line x1="3" y1="18" x2="21" y2="18"></line>
+                </svg>
+                <span>Home</span>
+            </a>
+            <a href="#about" class="nav-item" data-section="about">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                    <polyline points="14 2 14 8 20 8"></polyline>
+                    <line x1="16" y1="13" x2="8" y2="13"></line>
+                    <line x1="16" y1="17" x2="8" y2="17"></line>
+                    <polyline points="10 9 9 9 8 9"></polyline>
+                </svg>
+                <span>About</span>
+            </a>
+
+
+            <a href="#education" class="nav-item" data-section="education">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
+                    <path d="M6 12v5c3 3 9 3 12 0v-5"></path>
+                </svg>
+                <span>Education</span>
+            </a>
+
+            <a href="#Skills" class="nav-item" data-section="Skills">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 2L15 8H9L12 2Z"></path>
+                    <path d="M12 22L9 16H15L12 22Z"></path>
+                    <path d="M2 12L8 15V9L2 12Z"></path>
+                    <path d="M22 12L16 9V15L22 12Z"></path>
+                </svg>
+                <span>Skills</span>
+            </a>
+
+
+            <a href="#projects" class="nav-item" data-section="projects">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+                    <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+                </svg>
+                <span>Projects</span>
+            </a>
+            <a href="#achievements" class="nav-item" data-section="achievements">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="8" r="7"></circle>
+                    <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline>
+                </svg>
+                <span>Achievements</span>
+            </a>
+            <a href="#publications" class="nav-item" data-section="publications">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+                    <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+                </svg>
+                <span>Publications</span>
+            </a>
+            <a href="#hobbies" class="nav-item" data-section="hobbies">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path
+                        d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
+                    </path>
+                </svg>
+                <span>Hobbies</span>
+            </a>
+            <a href="#contact" class="nav-item" data-section="contact">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                    <polyline points="22,6 12,13 2,6"></polyline>
+                </svg>
+                <span>Contact</span>
+            </a>
+        </div>
+
+        <button id="download-cv-nav" class="download-btn-nav">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                <polyline points="7 10 12 15 17 10"></polyline>
+                <line x1="12" y1="15" x2="12" y2="3"></line>
+            </svg>
+        </button>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Hero Section -->
+        <section id="home" class="section hero-section">
+            <div class="container">
+                <div class="hero-grid">
+                    <div class="hero-content">
+                        <div class="welcome-badge">WELCOME</div>
+                        <h1 class="hero-title">
+                            Hi, I'm <span class="gradient-text">Fahim Chowdhury</span>
+                        </h1>
+                        <p class="hero-description">
+                            A passionate developer, researcher, and creative thinker dedicated to building innovative
+                            solutions and pushing boundaries.
+                        </p>
+                        <div class="hero-buttons">
+                            <a href="#projects" class="btn btn-primary">View My Work</a>
+                            <a href="assets/docs/cv.pdf" download="Fahimi_CV.pdf">
+                                <button id="download-cv-hero" class="btn btn-secondary">Download CV</button>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="hero-image">
+                        <div class="image-bg"></div>
+                        <img src="assets/images/zzz.png" alt="Profile Photo">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="section about-section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-label">Get to know me</span>
+                    <h2 class="section-title">About Me</h2>
+                </div>
+                <div class="about-grid">
+                    <div class="about-text">
+                        <p>
+                            Hello! I'm a dedicated professional with a passion for innovation and excellence. My journey
+                            has been driven by curiosity and a constant desire to learn and grow.
+                        </p>
+                        <p>
+                            With expertise spanning multiple domains, I thrive on tackling complex challenges and
+                            transforming ideas into reality. My approach combines technical proficiency with creative
+                            problem-solving.
+                        </p>
+                        <p>
+                            Beyond my professional pursuits, I believe in continuous learning and staying at the
+                            forefront of emerging technologies and methodologies.
+                        </p>
+                    </div>
+                    <div class="stats-grid">
+                        <div class="stat-card">
+                            <div class="stat-value">5+</div>
+                            <div class="stat-label">Years Experience</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-value">50+</div>
+                            <div class="stat-label">Projects Completed</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-value">12</div>
+                            <div class="stat-label">Publications</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-value">8</div>
+                            <div class="stat-label">Awards Won</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Education Section -->
+        <section id="education" class="section education-section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-label">My Journey</span>
+                    <h2 class="section-title">Education</h2>
+                </div>
+                <div class="education-list">
+                    <div class="education-card">
+                        <div class="education-header">
+                            <h3>Bsc in Computer Science and Engineering</h3>
+                            <span class="education-year">2024 - 2028</span>
+                        </div>
+                        <p class="education-institution">INTERNATIONAL ISLAMIC UNIVERSITY CHITTAGONG</p>
+                        <p class="education-description">Currently in 3rd Semester, developing expertise in Data Structures, Software Development, and Digital Logic..</p>
+                    </div>
+                    <div class="education-card">
+                        <div class="education-header">
+                            <h3>Higher Secondary in Science</h3>
+                            <span class="education-year">2020 - 2022</span>
+                        </div>
+                        <p class="education-institution">NORTH KATTALI ALHAJ MOSTAFA HAKIM COLLEGE</p>
+                        <p class="education-description">Focuses on main subjects of Science. GPA: 4.3/5.0</p>
+                    </div>
+                    <div class="education-card">
+                        <div class="education-header">
+                            <h3>High School </h3>
+                            <span class="education-year">2015 - 2020</span>
+                        </div>
+                        <p class="education-institution">MADAMBIBIRHAT SHAHJAHAN HIGH SCHOOL</p>
+                        <p class="education-description">Focus on Science and Mathematics.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section id="Skills">
+            <h2 class="section-title">Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-card">HTML5</div>
+                <div class="skill-card">CSS3</div>
+                <div class="skill-card">JavaScript (ES6+)</div>
+                <div class="skill-card">React.js</div>
+                <div class="skill-card">Git & GitHub</div>
+                <div class="skill-card">Responsive Design</div>
+            </div>
+        </section>
+
+
+
+        <!-- Projects Section -->
+        <section id="projects" class="section projects-section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-label">My Work</span>
+                    <h2 class="section-title">Projects</h2>
+                </div>
+                <div class="projects-grid">
+                    <div class="project-card">
+                        <div class="project-image"></div>
+                        <h3>AI-Powered Analytics Platform</h3>
+                        <p>A comprehensive analytics platform using machine learning to provide actionable insights.</p>
+                        <div class="project-tags">
+                            <span class="tag">React</span>
+                            <span class="tag">Python</span>
+                            <span class="tag">TensorFlow</span>
+                        </div>
+                    </div>
+                    <div class="project-card">
+                        <div class="project-image"></div>
+                        <h3>E-Commerce Mobile App</h3>
+                        <p>Full-stack mobile application with real-time inventory management and payment processing.</p>
+                        <div class="project-tags">
+                            <span class="tag">React Native</span>
+                            <span class="tag">Node.js</span>
+                            <span class="tag">MongoDB</span>
+                        </div>
+                    </div>
+                    <div class="project-card">
+                        <div class="project-image"></div>
+                        <h3>Smart Home IoT System</h3>
+                        <p>Integrated IoT solution for home automation with voice control and energy optimization.</p>
+                        <div class="project-tags">
+                            <span class="tag">IoT</span>
+                            <span class="tag">AWS</span>
+                            <span class="tag">Raspberry Pi</span>
+                        </div>
+                    </div>
+                    <div class="project-card">
+                        <div class="project-image"></div>
+                        <h3>Healthcare Management System</h3>
+                        <p>Digital platform connecting patients with healthcare providers for seamless care.</p>
+                        <div class="project-tags">
+                            <span class="tag">Vue.js</span>
+                            <span class="tag">Django</span>
+                            <span class="tag">PostgreSQL</span>
+                        </div>
+                    </div>
+                    <div class="project-card">
+                        <div class="project-image"></div>
+                        <h3>Blockchain Supply Chain</h3>
+                        <p>Decentralized supply chain tracking system ensuring transparency and authenticity.</p>
+                        <div class="project-tags">
+                            <span class="tag">Blockchain</span>
+                            <span class="tag">Solidity</span>
+                            <span class="tag">Web3</span>
+                        </div>
+                    </div>
+                    <div class="project-card">
+                        <div class="project-image"></div>
+                        <h3>Real-Time Collaboration Tool</h3>
+                        <p>Cloud-based platform enabling teams to collaborate with live editing and video calls.</p>
+                        <div class="project-tags">
+                            <span class="tag">WebRTC</span>
+                            <span class="tag">Socket.io</span>
+                            <span class="tag">React</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Achievements Section -->
+        <section id="achievements" class="section achievements-section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-label">Milestones</span>
+                    <h2 class="section-title">Achievements</h2>
+                </div>
+                <div class="achievements-grid">
+                    <div class="achievement-card">
+                        <div class="achievement-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <circle cx="12" cy="8" r="7"></circle>
+                                <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline>
+                            </svg>
+                        </div>
+                        <div class="achievement-content">
+                            <h3>Best Innovation Award 2023</h3>
+                            <p class="achievement-org">Tech Innovation Summit</p>
+                            <p class="achievement-desc">Recognized for developing a groundbreaking AI solution that
+                                revolutionized data processing.</p>
+                        </div>
+                    </div>
+                    <div class="achievement-card">
+                        <div class="achievement-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <circle cx="12" cy="8" r="7"></circle>
+                                <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline>
+                            </svg>
+                        </div>
+                        <div class="achievement-content">
+                            <h3>Top 10 Under 30</h3>
+                            <p class="achievement-org">Forbes Technology</p>
+                            <p class="achievement-desc">Featured in Forbes list of young professionals making
+                                significant impact in technology.</p>
+                        </div>
+                    </div>
+                    <div class="achievement-card">
+                        <div class="achievement-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <circle cx="12" cy="8" r="7"></circle>
+                                <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline>
+                            </svg>
+                        </div>
+                        <div class="achievement-content">
+                            <h3>Hackathon Winner</h3>
+                            <p class="achievement-org">Global Dev Challenge</p>
+                            <p class="achievement-desc">First place among 500+ teams for creating an innovative climate
+                                tracking application.</p>
+                        </div>
+                    </div>
+                    <div class="achievement-card">
+                        <div class="achievement-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <circle cx="12" cy="8" r="7"></circle>
+                                <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline>
+                            </svg>
+                        </div>
+                        <div class="achievement-content">
+                            <h3>Open Source Contributor Award</h3>
+                            <p class="achievement-org">GitHub</p>
+                            <p class="achievement-desc">Acknowledged for significant contributions to major open-source
+                                projects.</p>
+                        </div>
+                    </div>
+                    <div class="achievement-card">
+                        <div class="achievement-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <circle cx="12" cy="8" r="7"></circle>
+                                <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline>
+                            </svg>
+                        </div>
+                        <div class="achievement-content">
+                            <h3>Research Excellence Award</h3>
+                            <p class="achievement-org">ACM Conference</p>
+                            <p class="achievement-desc">Honored for outstanding research paper on distributed computing
+                                systems.</p>
+                        </div>
+                    </div>
+                    <div class="achievement-card">
+                        <div class="achievement-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <circle cx="12" cy="8" r="7"></circle>
+                                <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline>
+                            </svg>
+                        </div>
+                        <div class="achievement-content">
+                            <h3>Patent Grant</h3>
+                            <p class="achievement-org">US Patent Office</p>
+                            <p class="achievement-desc">Granted patent for innovative algorithm in natural language
+                                processing.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Publications Section -->
+        <section id="publications" class="section publications-section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-label">Research & Writing</span>
+                    <h2 class="section-title">Publications</h2>
+                </div>
+                <div class="publications-list">
+                    <div class="publication-card">
+                        <h3>Advanced Neural Networks for Image Recognition</h3>
+                        <div class="publication-meta">
+                            <span>Journal of Artificial Intelligence Research</span>
+                            <span>•</span>
+                            <span>2023</span>
+                            <span>•</span>
+                            <span>156 citations</span>
+                        </div>
+                        <p class="publication-authors">Authors: FAHIM CHOWDHURY .</p>
+                    </div>
+                    <div class="publication-card">
+                        <h3>Scalable Distributed Computing in Cloud Environments</h3>
+                        <div class="publication-meta">
+                            <span>ACM Transactions on Computer Systems</span>
+                            <span>•</span>
+                            <span>2022</span>
+                            <span>•</span>
+                            <span>243 citations</span>
+                        </div>
+                        <p class="publication-authors">Authors: FAHIM CHOWDHURY</p>
+                    </div>
+                    <div class="publication-card">
+                        <h3>Machine Learning Applications in Healthcare</h3>
+                        <div class="publication-meta">
+                            <span>Medical Informatics Today</span>
+                            <span>•</span>
+                            <span>2022</span>
+                            <span>•</span>
+                            <span>189 citations</span>
+                        </div>
+                        <p class="publication-authors">Authors: FAHIM CHOWDHURY.</p>
+                    </div>
+                    <div class="publication-card">
+                        <h3>Blockchain Technology for Supply Chain Management</h3>
+                        <div class="publication-meta">
+                            <span>International Journal of Information Management</span>
+                            <span>•</span>
+                            <span>2021</span>
+                            <span>•</span>
+                            <span>312 citations</span>
+                        </div>
+                        <p class="publication-authors">Authors: FAHIM CHOWDHURY</p>
+                    </div>
+                    <div class="publication-card">
+                        <h3>Natural Language Processing: Current Trends and Future Directions</h3>
+                        <div class="publication-meta">
+                            <span>Computational Linguistics Quarterly</span>
+                            <span>•</span>
+                            <span>2021</span>
+                            <span>•</span>
+                            <span>421 citations</span>
+                        </div>
+                        <p class="publication-authors">Authors: FAHIM CHOWDHURY</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Hobbies Section -->
+        <section id="hobbies" class="section hobbies-section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-label">Beyond Work</span>
+                    <h2 class="section-title">Hobbies & Interests</h2>
+                </div>
+                <div class="hobbies-grid">
+                    <div class="hobby-card">
+                        <div class="hobby-emoji">📸</div>
+                        <h3>Photography</h3>
+                        <p>Capturing moments and landscapes</p>
+                    </div>
+                    <div class="hobby-card">
+                        <div class="hobby-emoji">📚</div>
+                        <h3>Reading</h3>
+                        <p>Sci-fi novels and tech literature</p>
+                    </div>
+                    <div class="hobby-card">
+                        <div class="hobby-emoji">🥾</div>
+                        <h3>Hiking</h3>
+                        <p>Exploring nature trails</p>
+                    </div>
+                    <div class="hobby-card">
+                        <div class="hobby-emoji">🍳</div>
+                        <h3>Cooking</h3>
+                        <p>Experimenting with cuisines</p>
+                    </div>
+                    <div class="hobby-card">
+                        <div class="hobby-emoji">🎵</div>
+                        <h3>Music</h3>
+                        <p>Playing guitar and piano</p>
+                    </div>
+                    <div class="hobby-card">
+                        <div class="hobby-emoji">🎮</div>
+                        <h3>Gaming</h3>
+                        <p>Strategy and puzzle games</p>
+                    </div>
+                    <div class="hobby-card">
+                        <div class="hobby-emoji">✈️</div>
+                        <h3>Traveling</h3>
+                        <p>Discovering new cultures</p>
+                    </div>
+                    <div class="hobby-card">
+                        <div class="hobby-emoji">🧘</div>
+                        <h3>Yoga</h3>
+                        <p>Mindfulness and fitness</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section contact-section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-label">Get in Touch</span>
+                    <h2 class="section-title">Contact Me</h2>
+                </div>
+                <div class="contact-grid">
+                    <div class="contact-info">
+                        <p class="contact-intro">
+                            If you have any questions, collaboration opportunities, or just want to say hello, feel free
+                            to reach out!
+                        </p>
+                        <div class="contact-cards">
+                            <div class="contact-card">
+                                <div class="contact-icon">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
+                                        <path
+                                            d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z">
+                                        </path>
+                                        <polyline points="22,6 12,13 2,6"></polyline>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <p class="contact-label">Email</p>
+                                    <a href="fahimination@gmail.com">fahimination@gmail.com</a>
+                                </div>
+                            </div>
+                            <div class="contact-card">
+                                <div class="contact-icon">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
+                                        <path
+                                            d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+                                        </path>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <p class="contact-label">Phone</p>
+                                    <a href="tel:+88017******5">017*******5</a>
+                                </div>
+                            </div>
+                            <div class="contact-card">
+                                <div class="contact-icon">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
+                                        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                        <circle cx="12" cy="10" r="3"></circle>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <p class="contact-label">Location</p>
+                                    <p>4315-BHATIARI,CHITTAGONG</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contact-form-wrapper">
+                        <form id="contact-form" class="contact-form">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="name">Name</label>
+                                    <input type="text" id="name" name="name" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="email">Email</label>
+                                    <input type="email" id="email" name="email" required>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="subject">Subject</label>
+                                <input type="text" id="subject" name="subject" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Message</label>
+                                <textarea id="message" name="message" rows="5" required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-submit">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <line x1="22" y1="2" x2="11" y2="13"></line>
+                                    <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                                </svg>
+                                Send Message
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="container">
+                <div class="footer-content">
+                    <h3>Let's Connect</h3>
+                    <p>Feel free to reach out for collaborations or just a friendly chat!</p>
+                    <div class="footer-buttons">
+                        <a href="fahimination@gmal.com" class="btn btn-primary">Email Me</a>
+                        <button id="download-cv-footer" class="btn btn-secondary">Download CV</button>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p>&copy; 2025 FAHIM CHOWDHURY. All rights reserved.</p>
+                </div>
+            </div>
+        </footer>
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
